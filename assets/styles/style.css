@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/images/header-background.png");
+    background-size: cover;
+
+    width: 100%;
+    min-height: 505px;
+}
+
+.header-content {
+    color: #fff;
+    margin: 0 25px;
+    width: 100%;      /* Faz a caixa ocupar a largura total disponível */
+    max-width: 430px; /* Limita ao tamanho máximo que você deseja para o bloco de texto */
+    padding: 0 25px;  /* Substituímos a margin lateral por padding para melhor controle */
+    text-align: left; /* Garante que o texto fique no canto esquerdo */
+    align-self: center; /* Mantém o bloco centralizado no header, mas o texto dentro dele à esquerda */
+}
+
+header h1 {
+    width: 278px;
+    min-width: 278px; /* Força a não encolher */
+    max-width: 278px; /* Força a não esticar */
+    font-weight: 400;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-family: "Open Sans", cursive;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+button {
+    font-family: "Open Sans", cursive;
+    font-size: 16px;
+    font-weight: 400;
+    width: 381px;
+    max-width: 381px;
+    height: 54px;
+    border-radius: 28px;
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-windows {
+    background-color: #fff;
+    color: #000;
+    gap: 5px;
+}
+
+.discord-page {
+    background-color: #23272A;
+    color: #fff;
+}
+
+.content-container {
+    font-family: "Open Sans", cursive;
+    width: 100%;
+    align-items: center;
+}
+
+.feature-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 25px;
+}
+
+.feature-section:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.feature-section h1 {
+    font-size: 24px;
+    font-weight: 800;
+    max-width: 370px;
+    margin-bottom: 30px;
+    text-align: left;
+    width: 100%;
+}
+
+#reliable-connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 25px;
+    background-color: #f6f6f6;
+}
+
+#reliable-connection h1 {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000;
+}
+
+#reliable-connection h2 {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", cursive;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+.feature-section h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.feature-section img {
+    max-width: 100%;        /* Garante que a imagem não ultrapasse a tela */
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;    /* Espaço entre a imagem e o texto */
+}
+
+footer {
+    background-color: #23272A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+}
+
+
+/* --- Telas maiores que 1280px (Monitores UltraWide / Desktops Grandes) --- */
+@media (min-width: 1280px) {
+    header {
+        background-image: url("/assets/images/computer/header-Background.png");
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .button-container {
+        flex-direction: row; /* Alinha botões lado a lado */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .header-content {
+        /* Garante que a caixa azul da sua imagem fique no meio da tela */
+        max-width: 900px; 
+        margin: 0 auto;    
+        text-align: center; 
+        padding-left: 0;   /* Remove paddings laterais que podem entortar o centro */
+        padding-right: 0;
+        display: flex;     /* Usar flex aqui ajuda a garantir o alinhamento dos filhos */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        /* Para quebrar a linha do h1 no centro */
+        width: 100%;
+        max-width: 500px;  /* Ajuste este valor para a quebra que desejar */
+        margin: 0 auto 20px auto; 
+        text-align: center;
+        font-size: 56px;
+        min-width: 0;      /* Remove qualquer trava de largura do mobile */
+    }
+
+    header h2 {
+        /* Resolve o espaço vazio na direita que você viu na imagem */
+        width: 100%;       
+        max-width: 800px;   /* Deixa o h2 usar todo o espaço dos 900px da div pai */
+        margin: 20px auto;    /* Centraliza o bloco de texto */
+        text-align: center;
+        font-size: 16px;   /* Ajuste para o tamanho desejado */
+    }
+
+    .download-windows {
+        width: 205px;
+        height: 44px;
+    }
+
+    .discord-page {
+        width: 281px;
+        height: 44px;
+    }
+
+   .feature-section {
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        padding: 100px 10%;
+    }
+    
+    .feature-section:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+   .text-content {
+        max-width: 450px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+   }
+
+   #reliable-connection {
+        flex-direction: column; /* Empilha um embaixo do outro */
+        text-align: center;     /* Centraliza todos os textos */
+        padding: 100px 20px;
+        background-color: #f6f6f6;
+        width: 100%;
+    }
+
+    #reliable-connection h1 {
+        font-family: "Luckiest Guy", cursive;
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+    #reliable-connection h2 {
+        font-family: "Open Sans", cursive;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    #reliable-connection img {
+        max-width: 1180px;      /* Imagem bem grande como no print */
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .feature-section h1 {
+        font-size: 40px;
+        font-weight: 800;
+        max-width: 329px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .feature-section h2 {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 100%; /* Remove a trava de largura do mobile */
+    }
+
+    .feature-section img {
+        width: 607px;
+        height: auto;
+    }
+
+    /* Forçamos a última seção a ignorar o 'row' e usar 'column' */
+    .feature-section#reliable-connection {
+        flex-direction: column; 
+        text-align: center;
+        padding: 80px 20px;
+        background-color: #f6f6f6; /* Cor de fundo cinza clara da imagem */
+    }
+
+    /* Ajustamos as larguras máximas para o texto centralizado */
+    #reliable-connection h1 {
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+        font-size: 45px; /* Tamanho maior para o Luckiest Guy */
+    }
+
+    #reliable-connection h2 {
+        max-width: 900px;
+        margin: 0 auto 40px auto;
+    }
+
+    /* A imagem ocupa a largura correta no centro */
+    #reliable-connection img {
+        max-width: 100%;
+        width: 784px;
+        height: 508px;/* Tamanho grande conforme o print */
+        margin-top: 20px;
+    }
+
+    #invite-only-space img {
+        content: url("/assets/images/section-img1.png");
+    }
+
+    #voice-channels img {
+        content: url("/assets/images/section-img2.png");
+    }
+
+    #community-management img {
+        content: url("/assets/images/section-img3.png");
+    }
+
+    #reliable-connection img {
+        content: url("/assets/images/section-img4.png");
+    }
+}
