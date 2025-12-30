@@ -11,7 +11,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("/assets/images/header-background.png");
+    background-image: url("../images/background.png");
     background-size: cover;
 
     width: 100%;
@@ -21,17 +21,17 @@ header {
 .header-content {
     color: #fff;
     margin: 0 25px;
-    width: 100%;      /* Faz a caixa ocupar a largura total disponível */
-    max-width: 430px; /* Limita ao tamanho máximo que você deseja para o bloco de texto */
-    padding: 0 25px;  /* Substituímos a margin lateral por padding para melhor controle */
-    text-align: left; /* Garante que o texto fique no canto esquerdo */
-    align-self: center; /* Mantém o bloco centralizado no header, mas o texto dentro dele à esquerda */
+    width: 100%;      
+    max-width: 430px; 
+    padding: 0 25px;  
+    text-align: left; 
+    align-self: center; 
 }
 
 header h1 {
     width: 278px;
-    min-width: 278px; /* Força a não encolher */
-    max-width: 278px; /* Força a não esticar */
+    min-width: 278px;
+    max-width: 278px;
     font-weight: 400;
     font-family: "Luckiest Guy", cursive;
     font-size: 32px;
@@ -140,10 +140,10 @@ button a {
 }
 
 .feature-section img {
-    max-width: 100%;        /* Garante que a imagem não ultrapasse a tela */
+    max-width: 100%;       
     height: auto;
     margin-top: 20px;
-    margin-bottom: 20px;    /* Espaço entre a imagem e o texto */
+    margin-bottom: 20px; 
 }
 
 footer {
@@ -158,46 +158,44 @@ footer {
 /* --- Telas maiores que 1280px (Monitores UltraWide / Desktops Grandes) --- */
 @media (min-width: 1280px) {
     header {
-        background-image: url("/assets/images/computer/header-Background.png");
+        background-image: url("../images/computer/background1.png");
         height: auto;
         padding: 80px 0;
     }
 
     .button-container {
-        flex-direction: row; /* Alinha botões lado a lado */
+        flex-direction: row;
         justify-content: center;
         gap: 20px;
     }
 
     .header-content {
-        /* Garante que a caixa azul da sua imagem fique no meio da tela */
+    
         max-width: 900px; 
         margin: 0 auto;    
         text-align: center; 
-        padding-left: 0;   /* Remove paddings laterais que podem entortar o centro */
+        padding-left: 0;  
         padding-right: 0;
-        display: flex;     /* Usar flex aqui ajuda a garantir o alinhamento dos filhos */
+        display: flex;  
         flex-direction: column;
         align-items: center;
     }
 
     header h1 {
-        /* Para quebrar a linha do h1 no centro */
         width: 100%;
-        max-width: 500px;  /* Ajuste este valor para a quebra que desejar */
+        max-width: 500px;
         margin: 0 auto 20px auto; 
         text-align: center;
         font-size: 56px;
-        min-width: 0;      /* Remove qualquer trava de largura do mobile */
+        min-width: 0;
     }
 
     header h2 {
-        /* Resolve o espaço vazio na direita que você viu na imagem */
         width: 100%;       
-        max-width: 800px;   /* Deixa o h2 usar todo o espaço dos 900px da div pai */
-        margin: 20px auto;    /* Centraliza o bloco de texto */
+        max-width: 800px;   
+        margin: 20px auto; 
         text-align: center;
-        font-size: 16px;   /* Ajuste para o tamanho desejado */
+        font-size: 16px;
     }
 
     .download-windows {
@@ -230,8 +228,8 @@ footer {
    }
 
    #reliable-connection {
-        flex-direction: column; /* Empilha um embaixo do outro */
-        text-align: center;     /* Centraliza todos os textos */
+        flex-direction: column; 
+        text-align: center;  
         padding: 100px 20px;
         background-color: #f6f6f6;
         width: 100%;
@@ -250,7 +248,7 @@ footer {
     }
 
     #reliable-connection img {
-        max-width: 1180px;      /* Imagem bem grande como no print */
+        max-width: 1180px;   
         width: 100%;
         margin-top: 40px;
     }
@@ -266,7 +264,7 @@ footer {
     .feature-section h2 {
         font-size: 16px;
         font-weight: 400;
-        max-width: 100%; /* Remove a trava de largura do mobile */
+        max-width: 100%; 
     }
 
     .feature-section img {
@@ -274,19 +272,17 @@ footer {
         height: auto;
     }
 
-    /* Forçamos a última seção a ignorar o 'row' e usar 'column' */
     .feature-section#reliable-connection {
         flex-direction: column; 
         text-align: center;
         padding: 80px 20px;
-        background-color: #f6f6f6; /* Cor de fundo cinza clara da imagem */
+        background-color: #f6f6f6; 
     }
 
-    /* Ajustamos as larguras máximas para o texto centralizado */
     #reliable-connection h1 {
         max-width: 800px;
         margin: 0 auto 20px auto;
-        font-size: 45px; /* Tamanho maior para o Luckiest Guy */
+        font-size: 45px;
     }
 
     #reliable-connection h2 {
@@ -294,27 +290,10 @@ footer {
         margin: 0 auto 40px auto;
     }
 
-    /* A imagem ocupa a largura correta no centro */
     #reliable-connection img {
         max-width: 100%;
         width: 784px;
-        height: 508px;/* Tamanho grande conforme o print */
+        height: 508px;
         margin-top: 20px;
-    }
-
-    #invite-only-space img {
-        content: url("/assets/images/section-img1.png");
-    }
-
-    #voice-channels img {
-        content: url("/assets/images/section-img2.png");
-    }
-
-    #community-management img {
-        content: url("/assets/images/section-img3.png");
-    }
-
-    #reliable-connection img {
-        content: url("/assets/images/section-img4.png");
     }
 }
